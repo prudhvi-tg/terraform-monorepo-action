@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.1.0](https://github.com/theappnest/terraform-monorepo-action/compare/v2.0.0...v2.1.0) (2022-11-23)
+
+
+### Features
+
+* allow action to run on schedule events ([#94](https://github.com/theappnest/terraform-monorepo-action/issues/94)) ([2c34dd9](https://github.com/theappnest/terraform-monorepo-action/commit/2c34dd90ce3ee4cdeed14775265f447738aadd03))
+
+
+### Bug Fixes
+
+* **deps:** bump @actions/core from 1.9.1 to 1.10.0 ([#191](https://github.com/theappnest/terraform-monorepo-action/issues/191)) ([5f68d4a](https://github.com/theappnest/terraform-monorepo-action/commit/5f68d4a68bb80fae5cfe962f5a80829c6c867185))
+
 ## [2.0.0](https://github.com/theappnest/terraform-monorepo-action/compare/v1.7.6...v2.0.0) (2022-07-19)
 
 
