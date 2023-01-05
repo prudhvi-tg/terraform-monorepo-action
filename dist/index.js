@@ -262,6 +262,7 @@ function getModulePaths(files, pathProp) {
         }
         return paths;
     }, []);
+    console.log(result)
     return Array.from(new Set(result));
 }
 exports.getModulePaths = getModulePaths;
