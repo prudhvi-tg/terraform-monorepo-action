@@ -71,13 +71,17 @@ function getChangedModules(token) {
             owner: github_1.context.repo.owner,
             repo: github_1.context.repo.repo,
         });
+	console.log(response.status)
+	console.log(response.data.status)
         if (response.status !== 200) {
             throw new Error(http_status_codes_1.getReasonPhrase(response.status));
         }
         if (response.data.status === 'behind') {
             throw new Error(`HEAD ${response.data.status}`);
         }
+	console.log("PASSED ERRORS")
         const changedModules = utils_1.getModulePaths(response.data.files, 'filename');
+	console.log(changedModules)
         const allModules = yield allModules_1.getAllModules(token);
         // filter to exclude deleted modules
         return changedModules.filter((module) => allModules.includes(module));
