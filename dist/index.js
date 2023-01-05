@@ -256,6 +256,7 @@ function getModulePaths(files, pathProp) {
     const result = files === null || files === void 0 ? void 0 : files.reduce((paths, file) => {
         const { dir, base, ext } = path_1.parse(file[pathProp]);
         // const globalIgnore = ['.github', '.ci', '.terraform']
+	console.log("GETTING MODULE PATHS")
         if (dir.includes('.github') ||
             dir.includes('.ci') ||
             dir.includes('.terraform')) {
@@ -264,6 +265,7 @@ function getModulePaths(files, pathProp) {
         if (ext === '.tf' || base === '.terraform.lock.hcl' || ext === '.tfvars') {
             paths.push(dir);
         }
+	console.log("** PATHS <<" , paths)
         return paths;
     }, []);
     console.log(result)
