@@ -135,6 +135,9 @@ function run() {
             const token = core.getInput('token', { required: true });
             const mode = core.getInput('mode', { required: true });
             const ignored = core.getInput('ignore');
+		
+	    console.log("****** CHANGE ******")
+	    console.log(mode)
             let modules;
             switch (mode) {
                 case 'all':
@@ -142,6 +145,7 @@ function run() {
                     break;
                 case 'changed':
                     modules = yield changedModules_1.getChangedModules(token);
+	            console.log(modules)
                     break;
                 default:
                     throw new Error(`Unknown mode: ${mode}`);
