@@ -214,6 +214,7 @@ function getSha(token) {
             }
             case 'push': {
                 const payload = github_1.context.payload;
+		console.log(payload)
                 base = payload.before;
                 head = payload.after;
                 break;
