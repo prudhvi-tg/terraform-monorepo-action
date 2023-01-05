@@ -62,6 +62,8 @@ const http_status_codes_1 = __nccwpck_require__(2828);
 const allModules_1 = __nccwpck_require__(1186);
 const utils_1 = __nccwpck_require__(918);
 function getChangedModules(token) {
+	
+   console.log("IN GET CHANGED MODULES")
     return __awaiter(this, void 0, void 0, function* () {
         const octokit = github_1.getOctokit(token);
         const { base, head } = yield utils_1.getSha(token);
