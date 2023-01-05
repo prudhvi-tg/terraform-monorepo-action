@@ -67,8 +67,8 @@ function getChangedModules(token) {
     return __awaiter(this, void 0, void 0, function* () {
 	console.log("** TOkEN", token)
         const octokit = github_1.getOctokit(token);
-	console.log(octokit)
         const { base, head } = yield utils_1.getSha(token);
+	console.log(base, head)
         const response = yield octokit.rest.repos.compareCommits({
             base,
             head,
