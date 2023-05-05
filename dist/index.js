@@ -69,15 +69,16 @@ function getChangedModules(token) {
         const octokit = github_1.getOctokit(token);
         const { base, head } = yield utils_1.getSha(token);
 	console.log(base, head)
+  let response = null;
 	if (base == "0000000000000000000000000000000000000000"){
-    const response = yield octokit.rest.git.getCommit({
+      response = yield octokit.rest.git.getCommit({
       commit_sha : head,
       owner: github_1.context.repo.owner,
       repo: github_1.context.repo.repo,
   });
   }
   else{
-      const response = yield octokit.rest.repos.compareCommits({
+        response = yield octokit.rest.repos.compareCommits({
         base,
         head,
         owner: github_1.context.repo.owner,
